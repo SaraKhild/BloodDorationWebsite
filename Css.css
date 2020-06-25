@@ -1,0 +1,131 @@
+	
+	body{
+	  position:relative;
+	  background-image:url('doctor2.png'); 
+	  background-repeat:no-repeat;
+	  background-size: cover ;
+	  height: 90%;
+	  font-family:"DejaVu Sans Mono", monospace;
+	}
+	
+	 .Information{
+	     border-radius: 2px;
+		 width:700px;
+		 height:530px;
+		 background:rgba(15,38,77,0.7);
+		 color:#fff;
+		 top:17%;
+		 margin:0px 0px 30px 300px;
+		 position:absolute;
+		 transform:transform(-50%,-50%);
+		 box-sizing:boeder-box;
+		 font-family:Courier New;
+	
+	 } 
+	 
+	.Information p {  text-align:center; font-size:20px;}
+	  
+	  
+	.massege{
+
+		color:white;
+		padding:10px;
+		margin:25px 0px 0px 350px;
+		font-size:25px;
+		font-weight: bold;
+	}
+	
+		#btn1{
+
+	  margin-left:100px;
+	  align-items: center;
+	  padding: 5px 5px; 
+	  border-radius: 8px; 
+	  background-color:#001f3f; 
+	  color: white; 
+	  border: 2px solid #001f3f;
+	  width: 150px;
+	  
+	 }
+	 
+	 
+	 #btn1:hover {
+	  background-color: green;
+	  color: white;
+	  border-color:green;
+	}
+
+	#btn2{   
+      margin-left: 600px; 
+     transform: translate(-150%, -150%);
+
+	  padding: 5px 5px;
+	  border-radius: 8px;
+	  background-color:#001f3f; 
+	  color: white; 
+	  border: 2px solid #001f3f;
+	  width: 150px; 
+	 }
+
+
+	 #btn2:hover {
+		 
+	  background-color:red; 
+	  color: white; 
+	  border-color:red;
+	}
+	
+	
+	
+	.form {
+		float:left;
+		margin-left: 100px;
+		
+	}
+	
+	
+	.form-container{
+		
+		margin-bottom:5px;
+		padding-bottom:6px;
+		position:relative;
+		
+	}
+	
+   .form-container label{
+	   
+	   display:inline-block;
+	   margin-bottom:3px;
+	  font-size:12px;
+	   
+   }
+
+	.form-container  input {
+       /* border:none;*/
+		border-color:rgb(118,176,241);
+		background-color:rgba(118,176,241,0.3);
+		display:block;
+		padding:5px 10px 10px 10px;
+		width:500px;
+		
+	}
+	
+	.form-container.success input{ border-color:#2ecc71;}
+	
+	.form-container.error input{ border-color:#e74c3c;}
+	
+	.form-container.success i.fa-check-circle{visibility:visible; color:#2ecc71;}
+	.form-container.error i.fa-exclamation-circle{visibility:visible;color:#e74c3c;}
+	
+	.form-container.error small{ visibility:visible;color:#e74c3c;}
+	
+	.form-container i{
+		
+		position:absolute;
+		left:450px;
+		top:25px;
+		visibility:hidden;
+	}
+	
+	.form-container small{ visibility:hidden;}
+	

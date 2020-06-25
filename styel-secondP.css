@@ -1,0 +1,77 @@
+	 
+	 
+	body{
+	  position:relative;
+	  background-image:url('doctor2.png'); 
+	  background-repeat:no-repeat;
+	  background-size: cover ;
+	  height: 100%;
+	   font-family:"DejaVu Sans Mono", monospace;
+	}
+	
+    #First-container{
+		
+	   align-items: center;
+	   /*text-align:center;*/
+	   width: 45%;
+       height: 250px;
+	   background:#F8F9F9;
+	   top: 25%;
+       margin: 0 auto;
+       position: relative;
+	   border: 1px solid #2E4053;
+	   border-radius: 3px;
+	}
+	 
+	 .styles{   
+      font-weight: bold;
+    }
+	 
+	 p{
+	 margin:30px 10px 10px 40px;
+	 color:rgb(38,61,91);
+	 font-size:20;
+	 
+	}
+
+
+     h4{
+     
+     text-align:center;	 
+	 color:rgb(38,61,91);
+	 font-size:20;
+	 margin:auto 0px;
+	 margin-top:5px;
+	 
+	}
+	 
+     .downloadtable {
+       margin-top: 40px;
+       padding: 20px;
+    }
+	
+	
+	button{
+	  margin:220px 0px 0px 550px;
+	  padding: 5px 5px; 
+	  border-radius: 8px; 
+	  background-color:#001f3f; 
+	  border: 2px solid #001f3f;
+	  width: 150px;
+    
+	}
+	
+	 button:hover {
+	  background-color:#ffd600;
+	  border-color:#ffd600;
+	 
+	}
+	
+   .button-link{
+     color: white;
+	 text-decoration: none;
+   }
+	
+	.button-link:hover{
+	 color:#001f3f;
+	}

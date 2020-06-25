@@ -1,0 +1,208 @@
+	<html>
+	  <head>
+
+
+		<link rel="stylesheet" href="Css.css">
+		<title>BLOOD DONORIS</title>
+		<link rel="shortcut icon" type="image/png" href="C:/Users/sarak/OneDrive/سطح المكتب/Website/icon.png">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<!--<link  rel="stylesheet" href="C:/Users/sarak/Downloads/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">-->
+	    <!-- <script type="text/javascript" src="C:/Users/sarak/OneDrive/سطح المكتب/Website/JavaScript.js"></script>-->
+	   
+	  </head>
+	<body>
+
+		<h4 class="massege"> <strong> EVERY &nbsp; BLOOD &nbsp; DONORIS &nbsp; A &nbsp; LIFE &nbsp; SAVER </strong> <!--img src="icon2.png" style="width:70px ;margin-left:10px"/--></h4>
+
+		  <div class="Information">
+			  
+			 <p > Enter Your Information </p>
+			 <br> <br> 
+			
+		<form  name="Form" action="SPbloodDroation.html" class="form"  id="Myform" >
+	  
+	  
+			<div class="form-container">
+				<label id="label">Full Name:</label> 
+				<input type="text" name="fullname"  id="fullname" placeholder="Enter name" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small > Error meassege</small> 
+				
+			</div>	
+			
+			 <div class="form-container  ">
+				<label id="label"> Phone Number: </label> 
+				<input type="text"name="phonenumber"  id="phonenumber" max="10" placeholder="05xxxxxxx" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small> Error meassege </small> 
+				
+			</div>	
+			
+			 <div class="form-container">
+				<label id="label"> City:</label> 
+				<input type="text" name="city" id="city" placeholder="city" placeholder="Enter cite" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small> Error meassege </small> 
+				
+			</div>
+			
+			 <div class="form-container">
+				 <label id="label"> Blood Type:</label> 
+				 <input type="text" id="bloodtype" name="bloodtype" style="color:white;"placeholder="Enter blood type"  >
+				 <i class="fas fa-check-circle"></i>
+				 <i class="fas fa-exclamation-circle"></i>
+				 <small> Error meassege </small> 
+				
+			 </div>
+			 
+			  <div class="form-container">
+				 <label id="label"> Hospital:</label> 
+				 <input type="text" id="hospital" name="hospital" style="color:white;" placeholder="Enter hospital" >
+				 <i class="fas fa-check-circle"></i>
+				 <i class="fas fa-exclamation-circle"></i>
+				 <small> Error meassege </small> 
+			
+			</div>	 
+				
+
+			<button  id="btn1" class="btnsent" onclick="passvalue()" >Save</button>
+			
+			
+			 <!--<label id="label"> Gender:</label> <br>
+			 <select name="gender" style="color:white;"> 
+			 
+			 <option value="M" style="background-color:#001f3f;">  Meal</option>
+			 <option value="F" style="background-color:#001f3f;"> Femal </option>
+			 
+			 </select><br> -->
+			<!-- <button type="button" id="start" onclick="openForm()" >START</button> "window.location.href='https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html';"  -->
+
+		
+	  </form>
+	  
+	       <button  id="btn2"  onclick="alertfun()" >Close</button>
+	  </div>
+	  
+	  	 
+	<script>
+	
+		   
+		   function alertfun(){
+						  
+             swal({
+				  title: "Are you sure?",
+				  icon: "warning",
+				  buttons: true,
+				  dangerMode: true,
+				})
+				.then((willDelete) => {
+				  if (willDelete) {
+					swal("Your Information has been deleted!", {
+					
+					});
+				  } 
+				});
+			  }
+	
+		   function passvalue(){
+		   
+		      var Name=document.getElementById("fullname").value;
+			  var Phonenumber = document.getElementById('phonenumber').value;
+			  var City = document.getElementById('city').value;
+			  var Bloodtype = document.getElementById('bloodtype').value;
+			  var Hospital = document.getElementById('hospital').value;
+
+			  
+			  localStorage.setItem("name",Name);
+			  localStorage.setItem("bloodtype",Bloodtype);
+			  localStorage.setItem("phonenumber",Phonenumber);
+			  localStorage.setItem("city",City);
+			  localStorage.setItem("hospital",Hospital);
+
+			 
+		   }
+		   
+	
+
+           /* function validtion (){
+			
+		
+			var fullname = document.getElementById('fullname').value;
+			var phonenumber = document.getElementById('phonenumber').value;
+			var city = document.getElementById('city').value;
+			var bloodtype = document.getElementById('bloodtype').value;
+			var hospital = document.getElementById('hospital').value;
+		
+		//|| phonenumber == "" || city == "" || bloodtype == "" || hospital== ""
+
+               if(fullname ==""){
+			     
+				 document.getElementById("error").innerHTML="Error Message !!";
+				 
+				 document.getElementById('fullname').style.borderColor = "red";
+       
+			     
+			   }else {
+					
+				}
+             
+			
+			}*/
+
+			/*function checkInput(){
+				
+			//get the values from the inputs
+				var FullNameValue = fullname.value.trim();
+				var PhoneNumberValue = phonenumber.value.trim();
+				var CityValue =city.value.trim();
+				var BloodTypeValue = bloodtype.value.trim();
+				var HospitalValue =hospital.value.trim();
+					
+				if( FullNameValue ==''){
+					
+					//show error
+					//add error class
+					setErrorFor(fullname,'Full Name can not be blank');
+				}else {
+					
+					//add success class
+					setSuccessFor(fullname);
+				}
+				
+				
+			}//end method
+
+
+			//method setErrorFor
+			 function setErrorFor( input,message){
+				
+				var formcontrol=input.parentElement; //.form-control
+				var small= formcontrol.querySelector('small');
+				
+				//add error message inside small
+				small.innerText=message;
+				
+				//add error class
+				formcontrol.className='form-container error';
+				
+			}//end method
+
+			//method setSuccessFor
+			function setSuccessFor(input) {
+				const formControl = input.parentElement;
+				formControl.className = 'form-container success';
+			}
+				
+        */
+			
+	</script>
+
+ </body>
+
+</html>
+
+
+

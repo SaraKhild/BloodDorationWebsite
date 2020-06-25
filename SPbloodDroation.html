@@ -1,0 +1,73 @@
+	<html>
+	  <head>	 
+
+	    <title>BLOOD DONORIS</title>	  
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+		<script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script> 
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="styel-secondP.css">
+	</head>
+
+    <body>	
+     
+	    <div id="First-container">
+	  
+	         <h4>  Blood donation request </h3> 
+		       <p>
+	         
+         		Name:         <span class="styles" id="outputname">___</span> <br> 
+			    Need:         <span class="styles" style="font-weight:bold"> Blood donors</span> <br>
+				Blood type:   <span class="styles" id="outputBT">___</span> <br>
+				Phone number: <span class="styles" id="outputPN">___</span> <br>
+				City:         <span class="styles" id="outputCity">___</span> <br>
+				Hospital:     <span class="styles" id="outputHospital">___</span> <br>
+				</p>	
+				
+              <!--<img style="width:13%; margin-left:480px; height: 12%;" src="C:/Users/sarak/OneDrive/سطح المكتب/Website/blood-donation-icon.png">--> 
+	       </div>
+				 <!--<a id="btn-Convert-Html2Image" href="#"> Download </a> -->
+
+				<button  onclick="alertfun()"> <a id="btn-Convert-Html2Image"  class="button-link"href="#"> Download </a></button>
+
+		<script>
+				  document.getElementById("outputname").innerHTML=localStorage.getItem("name");
+				  document.getElementById("outputBT").innerHTML=localStorage.getItem("bloodtype");
+				  document.getElementById("outputPN").innerHTML=localStorage.getItem("phonenumber");
+				  document.getElementById("outputCity").innerHTML=localStorage.getItem("city");
+				  document.getElementById("outputHospital").innerHTML=localStorage.getItem("hospital");
+			
+				 $("#btn-Convert-Html2Image").on('click', function() { 
+				 
+							var container = document.getElementById("First-container");; 
+							html2canvas(container, { allowTaint: true }).then(function (canvas) {
+							
+							 var link = document.createElement("a");
+							  
+							var imgageData =  
+								canvas.toDataURL("image/png"); 
+						  
+							// Now browser starts downloading  
+							// it instead of just showing it 
+							var newData = imgageData.replace( 
+							/^data:image\/png/, "data:application/octet-stream"); 
+						  
+							$("#btn-Convert-Html2Image").attr( 
+							"download", "Blood doration.png").attr( 
+							"href", newData); 
+						});	
+						}); 
+				  
+				  
+						  function alertfun (){
+						  
+                          swal("Thank You ", "Ever blood doration save a life");
+						  }
+
+       </script>
+
+   </body>
+
+</html>
+
+
+
